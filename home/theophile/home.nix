@@ -17,6 +17,7 @@
     ./programs/git.nix
     ./programs/zen.nix
     ./programs/wm
+    ./programs/vscode
   ];
 
   home.packages = with pkgs; [

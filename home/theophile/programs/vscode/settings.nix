@@ -1,0 +1,94 @@
+{ ... }:
+
+{
+  programs.vscode.profiles.default.userSettings = builtins.fromJSON ''
+    {
+      // Nixos
+      "nix.serverPath": "nixd",
+      "nix.enableLanguageServer": true,
+      "nixpkgs": {
+        "expr": "import <nixpkgs> { }"
+      },
+      "formatting": {
+        "command": [
+          "nixfmt"
+        ]
+      },
+      "nix.formatterPath": "nixfmt",
+      "update.showReleaseNotes": false
+
+      // UI Layout & Appearance
+      "workbench.sideBar.location": "right",
+      "workbench.startupEditor": "none",
+      "workbench.tips.enabled": false,
+      "workbench.editor.wrapTabs": true,
+      "workbench.editor.tabActionCloseVisibility": false,
+      "workbench.editor.editorActionsLocation": "hidden",
+      "workbench.layoutControl.enabled": false,
+      "workbench.navigationControl.enabled": false,
+      "workbench.editor.enablePreview": false,
+      "workbench.tree.indent": 12,
+      "workbench.iconTheme": "material-icon-theme",
+      "workbench.productIconTheme": "material-product-icons",
+      "window.zoomLevel": 1.5,
+      "window.customTitleBarVisibility": "never",
+      "window.titleBarStyle": "native",
+      "window.menuBarVisibility": "hidden",
+
+      // Editor Settings
+      "editor.fontFamily": "'CaskaydiaCove Nerd Font Mono', 'Droid Sans Mono', 'monospace', monospace",
+      "editor.fontLigatures": true,
+      "editor.wordWrap": "on",
+      "editor.cursorBlinking": "expand",
+      "editor.cursorSmoothCaretAnimation": "on",
+      "editor.minimap.renderCharacters": false,
+      "editor.minimap.scale": 2,
+      "editor.minimap.sectionHeaderFontSize": 16,
+      "editor.minimap.showSlider": "always",
+      "editor.minimap.side": "left",
+      "editor.guides.bracketPairs": "active",
+      "editor.scrollbar.verticalScrollbarSize": 2,
+      "editor.formatOnSave": true,
+      "editor.linkedEditing": true,
+      "editor.mouseWheelScrollSensitivity": 2,
+      "editor.smoothScrolling": true,
+      "editor.matchBrackets": "never",
+      "editor.lineHeight": 26,
+      "editor.suggest.insertMode": "replace",
+
+      // Terminal & Markdown Preview
+      "terminal.integrated.fontLigatures.enabled": true,
+      "terminal.integrated.fontFamily": "'CaskaydiaCove Nerd Font Mono'",
+      "markdown.preview.fontFamily": "\"CaskaydiaCove Nerd Font Mono\", -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif",
+
+      // Git & Extensions
+      "git.blame.editorDecoration.enabled": true,
+      "git.confirmSync": false,
+      "extensions.ignoreRecommendations": true,
+
+      // File Explorer & Zen Mode
+      "explorer.confirmDelete": false,
+      "explorer.confirmDragAndDrop": false,
+      "explorer.fileNesting.enabled": true,
+      "explorer.fileNesting.expand": false,
+      "zenMode.centerLayout": false,
+      "zenMode.hideLineNumbers": false,
+
+      // Breadcrumbs & Tabs
+      "breadcrumbs.enabled": false,
+
+      // Typescript & Keyboard
+      "typescript.updateImportsOnFileMove.enabled": "always",
+      "keyboard.dispatch": "keyCode",
+
+      // Telemetry & Privacy
+      "telemetry.editStats.enabled": false,
+      "telemetry.feedback.enabled": false,
+      "telemetry.telemetryLevel": "off",
+      "workbench.colorTheme": "Caelestia",
+      "[typescript]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+      }
+    }
+  '';
+}
