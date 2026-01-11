@@ -16,6 +16,7 @@
     ./programs/nvf.nix
     ./programs/git.nix
     ./programs/zen.nix
+    ./programs/wm
   ];
 
   home.packages = with pkgs; [
@@ -24,8 +25,6 @@
     waybar
     wl-clipboard
     pywalfox-native
-    brightnessctl
-    swww
     nautilus
     zathura
 
