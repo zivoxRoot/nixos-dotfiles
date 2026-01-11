@@ -15,6 +15,7 @@
     ./programs/kitty.nix
     ./programs/nvf.nix
     ./programs/git.nix
+    ./programs/zen.nix
   ];
 
   home.packages = with pkgs; [
