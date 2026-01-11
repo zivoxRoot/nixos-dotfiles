@@ -2,6 +2,8 @@
 
 {
   wayland.windowManager.hyprland.settings = {
+    enable_fractional_scaling = true;
+
     general = {
       gaps_in = 8;
       gaps_out = 16;
