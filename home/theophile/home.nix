@@ -18,6 +18,7 @@
     ./programs/zen.nix
     ./programs/wm
     ./programs/vscode
+    ./programs/waybar.nix
   ];
 
   home.packages = with pkgs; [
@@ -28,6 +29,7 @@
     pywalfox-native
     nautilus
     zathura
+    telegram-desktop
 
     # Terminal
     ripgrep
