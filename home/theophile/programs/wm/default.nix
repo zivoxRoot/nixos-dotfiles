@@ -1,12 +1,6 @@
 { pkgs, ... }:
 
 {
-  home.packages = with pkgs; [
-    brightnessctl
-    swww
-    playerctl
-  ];
-
   imports = [
     ./monitors.nix
     ./startup.nix
