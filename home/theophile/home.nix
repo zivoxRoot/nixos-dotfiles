@@ -16,7 +16,7 @@
     ./programs/nvf.nix
     ./programs/git.nix
     ./programs/zen.nix
-    ./programs/wm
+    ./programs/wm/hyprland.nix
     ./programs/vscode
     ./programs/waybar.nix
   ];
