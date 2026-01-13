@@ -10,6 +10,7 @@
     ./users.nix
     ./desktop.nix
     ./system.nix
+    ./stylix.nix
   ];
 
   programs.zsh.enable = true;
