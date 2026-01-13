@@ -6,7 +6,7 @@ in
 {
   wayland.windowManager.hyprland.settings = {
     bind = [
-      "${vars.super}, Q, killactive"
+      "${vars.killactive}, killactive"
 
       # Windows settings
       "${vars.super}, V, togglefloating"

@@ -39,6 +39,7 @@
     trash-cli
     bat
     htop
+    jq
 
     # Programming
     nixfmt-rfc-style

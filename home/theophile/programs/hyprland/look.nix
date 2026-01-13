@@ -1,11 +1,14 @@
 { ... }:
 
+let
+  vars = import ./variables.nix;
+in
 {
   wayland.windowManager.hyprland.settings = {
     general = {
-      gaps_in = 8;
-      gaps_out = 16;
-      border_size = 2;
+      gaps_in = vars.gaps_in;
+      gaps_out = vars.gaps_out;
+      border_size = vars.border_size;
 
       resize_on_border = false;
       allow_tearing = false;
@@ -13,22 +16,22 @@
     };
 
     decoration = {
-      rounding = 10;
+      rounding = vars.rounding;
       rounding_power = 2;
 
-      active_opacity = 0.95;
-      inactive_opacity = 0.8;
+      active_opacity = vars.active_opacity;
+      inactive_opacity = vars.inactive_opacity;
 
-      dim_special = 0.75;
+      dim_special = vars.dim_special;
 
       shadow = {
-        enabled = true;
+        enabled = vars.shadow_enabled;
         range = 4;
         render_power = 3;
       };
 
       blur = {
-        enabled = true;
+        enabled = vars.blur_enabled;
         size = 3;
         passes = 2;
         vibrancy = 0.1696;

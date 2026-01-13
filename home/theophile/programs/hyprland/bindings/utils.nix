@@ -7,7 +7,7 @@ in
 
   wayland.windowManager.hyprland.settings = {
     bind = [
-      "${vars.super}, W, exec, pkill waybar || waybar"
+      "${vars.toggle_waybar}, exec, pkill waybar || waybar"
     ];
   };
 }
