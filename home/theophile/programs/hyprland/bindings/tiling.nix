@@ -14,7 +14,7 @@ in
       "${vars.super}, Y, togglesplit"
       "${vars.super}, F, fullscreen, 0"
       "${vars.super}_SHIFT, F, fullscreen, 1"
-      "${vars.super}, X, pin"
+      "${vars.super}_SHIFT, X, pin"
 
       # Switch between workspace with SUPER + [0-9]
       "${vars.super}, code:10, workspace, 1"
@@ -61,6 +61,8 @@ in
       # Move/Resize windows with mouse
       "${vars.super}, mouse:272, movewindow"
       "${vars.super}, mouse:273, resizewindow"
+      "${vars.super}, Z, movewindow"
+      "${vars.super}, X, resizewindow"
     ];
 
     binde = [
@@ -82,9 +84,12 @@ in
       "${vars.super}_CONTROL, K, resizeactive, 0 -30"
       "${vars.super}_CONTROL, J, resizeactive, 0 30"
 
+      # Navigate to last workspace back and forth
+      "${vars.super}, TAB, workspace, previous"
+
       # Navigate relative workspaces with SUPER + Shift + [J / K]
-      "${vars.super}_SHIFT, J, workspace, r+1"
-      "${vars.super}_SHIFT, K, workspace, r-1"
+      "${vars.super}_ALT, J, workspace, r+1"
+      "${vars.super}_ALT, K, workspace, r-1"
     ];
   };
 }

@@ -16,7 +16,7 @@
     ./programs/nvf.nix
     ./programs/git.nix
     ./programs/zen.nix
-    ./programs/wm
+    ./programs/hyprland
     ./programs/vscode
     ./programs/waybar.nix
     ./programs/rofi/rofi.nix
@@ -38,6 +38,7 @@
     eza
     trash-cli
     bat
+    htop
 
     # Programming
     nixfmt-rfc-style
