@@ -16,6 +16,6 @@
     ./rules.nix
     ./look.nix
     ./animations.nix
-    ./bindings.nix
+    ./bindings
   ];
 }
