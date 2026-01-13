@@ -3,9 +3,6 @@
 {
   home.packages = [ pkgs.zoxide ];
 
-  # Prevents new user dialog in zsh
-  # system.userActivationScripts.zshrc = "touch .zshrc";
-
   imports = [
     ./aliases.nix
   ];
