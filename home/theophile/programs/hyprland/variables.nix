@@ -26,10 +26,17 @@ rec {
   blur_enabled = true;
 
   # Apps
-  kb_terminal = "${super}, T";
-  kb_browser = "${super}, B";
-  kb_file_manager = "${super}, E";
-  kb_code_editor = "${super}, C";
+  kb_terminal = "${super}_SHIFT, T";
+  kb_browser = "${super}_SHIFT, B";
+  kb_telegram = "${super}_SHIFT, M";
+  kb_code_editor = "${super}_SHIFT, C";
+  # Focus main apps
+  kb_terminal_focus = "${super}, T";
+  kb_browser_focus = "${super}, B";
+  kb_telegram_focus = "${super}, M";
+  kb_code_editor_focus = "${super}, C";
+
+  kb_file_manager = "${super}_SHIFT, E";
   kb_app_menu = "${super}, SPACE";
   kb_emoji_menu = "${super}_ALT, E";
   kb_calc_menu = "${super}_ALT, C";

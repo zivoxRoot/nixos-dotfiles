@@ -16,6 +16,12 @@ in
       "${vars.super}_SHIFT, F, fullscreen, 1"
       "${vars.super}_SHIFT, X, pin"
 
+      # Switch between main apps with SUPER + kb_app_focus
+      "${vars.kb_telegram_focus}, workspace, 1"
+      "${vars.kb_browser_focus}, workspace, 2"
+      "${vars.kb_code_editor_focus}, workspace, 3"
+      "${vars.kb_terminal_focus}, workspace, 4"
+
       # Switch between workspace with SUPER + [0-9]
       "${vars.super}, code:10, workspace, 1"
       "${vars.super}, code:11, workspace, 2"
