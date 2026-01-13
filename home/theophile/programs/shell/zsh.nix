@@ -66,6 +66,11 @@
 
       # Zoxide
       eval "$(${pkgs.zoxide}/bin/zoxide init --cmd cd zsh)"
+
+      # Zsh autosuggestions
+      source ${pkgs.zsh-autosuggestions}/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+      # Zsh syntax highlighting
+      source ${pkgs.zsh-syntax-highlighting}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
     '';
   };
 }
