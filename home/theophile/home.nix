@@ -16,7 +16,7 @@
     ./programs/nvf.nix
     ./programs/git.nix
     ./programs/zen.nix
-    ./programs/wm/hyprland.nix
+    ./programs/wm
     ./programs/vscode
     ./programs/waybar.nix
     ./programs/rofi/rofi.nix

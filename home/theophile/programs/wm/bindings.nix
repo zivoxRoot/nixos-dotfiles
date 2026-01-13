@@ -24,12 +24,12 @@ in
       "${super}, V, togglefloating"
       "${super}, P, pseudo"
       "${super}, Y, togglesplit"
+      "${super}, F, fullscreen, 0"
+      "${super}_SHIFT, F, fullscreen, 1"
+      "${super}, X, pin"
+      "${super}, W, exec, pkill waybar || waybar"
 
-      "${super}, H, movefocus, l"
-      "${super}, L, movefocus, r"
-      "${super}, K, movefocus, u"
-      "${super}, J, movefocus, d"
-
+      # Switch between workspace with SUPER + [0-9]
       "${super}, code:10, workspace, 1"
       "${super}, code:11, workspace, 2"
       "${super}, code:12, workspace, 3"
@@ -41,7 +41,7 @@ in
       "${super}, code:18, workspace, 9"
       "${super}, code:19, workspace, 10"
 
-      # Move window to workspace
+      # Move window to workspace with SUPER + [0-9]
       "${super}_SHIFT, code:10, movetoworkspace, 1"
       "${super}_SHIFT, code:11, movetoworkspace, 2"
       "${super}_SHIFT, code:12, movetoworkspace, 3"
@@ -53,16 +53,51 @@ in
       "${super}_SHIFT, code:18, movetoworkspace, 9"
       "${super}_SHIFT, code:19, movetoworkspace, 10"
 
+      # Move window to workspace (silent) with SUPER + Alt + [0-9]
+      "${super}_ALT, code:10, movetoworkspacesilent, 1"
+      "${super}_ALT, code:11, movetoworkspacesilent, 2"
+      "${super}_ALT, code:12, movetoworkspacesilent, 3"
+      "${super}_ALT, code:13, movetoworkspacesilent, 4"
+      "${super}_ALT, code:14, movetoworkspacesilent, 5"
+      "${super}_ALT, code:15, movetoworkspacesilent, 6"
+      "${super}_ALT, code:16, movetoworkspacesilent, 7"
+      "${super}_ALT, code:17, movetoworkspacesilent, 8"
+      "${super}_ALT, code:18, movetoworkspacesilent, 9"
+      "${super}_ALT, code:19, movetoworkspacesilent, 10"
+
       # Special workspace
       "${super}, S, togglespecialworkspace, magic"
       "${super}_SHIFT, S, movetoworkspace, special:magic"
-
     ];
 
     bindm = [
       # Move/Resize windows with mouse
       "${super}, mouse:272, movewindow"
       "${super}, mouse:273, resizewindow"
+    ];
+
+    binde = [
+      # Move window focus with SUPER + vim keys
+      "${super}, H, movefocus, l"
+      "${super}, L, movefocus, r"
+      "${super}, K, movefocus, u"
+      "${super}, J, movefocus, d"
+
+      # Move windows with SUPER + Shift + vim keys
+      "${super}_SHIFT, L, movewindow, r"
+      "${super}_SHIFT, H, movewindow, l"
+      "${super}_SHIFT, K, movewindow, u"
+      "${super}_SHIFT, J, movewindow, d"
+
+      # Resize active window with SUPER + Ctrl + vim keys
+      "${super}_CONTROL, L, resizeactive, 30 0"
+      "${super}_CONTROL, H, resizeactive, -30 0"
+      "${super}_CONTROL, K, resizeactive, 0 -30"
+      "${super}_CONTROL, J, resizeactive, 0 30"
+
+      # Navigate relative workspaces with SUPER + Ctrl + [J / K]
+      "${super}_CONTROL, J, workspace, r+1"
+      "${super}_CONTROL, K, workspace, r-1"
     ];
 
     bindl = [
@@ -88,7 +123,6 @@ in
       # Precise
       "ALT, XF86MonBrightnessUp, exec, brightnessctl -e4 -n2 set 1%+"
       "ALT, XF86MonBrightnessDown, exec, brightnessctl -e4 -n2 set 1%-"
-
     ];
   };
 }

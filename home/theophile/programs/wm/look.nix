@@ -16,6 +16,11 @@
       rounding = 10;
       rounding_power = 2;
 
+      active_opacity = 0.95;
+      inactive_opacity = 0.8;
+
+      dim_special = 0.75;
+
       shadow = {
         enabled = true;
         range = 4;
