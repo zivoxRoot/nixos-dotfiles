@@ -1,7 +1,7 @@
 { ... }:
 
 {
-  programs.vscode.profiles.default.userSettings = builtins.fromJSON ''
+  home.file.".config/Code/User/settings.json".text = ''
     {
       // Nixos
       "nix.serverPath": "nixd",
