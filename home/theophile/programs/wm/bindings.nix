@@ -5,7 +5,9 @@ let
   browser = "zen";
   file_manager = "nautilus";
   code_editor = "code --enable-features=UseOzonePlatform --ozone-platform=wayland";
-  menu = "rofi -show drun";
+  app_menu = "rofi -show drun";
+  emoji_menu = "rofi -show emoji";
+  calc_menu = "rofi -show calc";
   terminal = "kitty";
 in
 {
@@ -16,7 +18,9 @@ in
       "${super}, B, exec, ${browser}"
       "${super}, E, exec, ${file_manager}"
       "${super}, C, exec, ${code_editor}"
-      "${super}, SPACE, exec, ${menu}"
+      "${super}, SPACE, exec, ${app_menu}"
+      "${super}_ALT, E, exec, ${emoji_menu}"
+      "${super}_ALT, C, exec, ${calc_menu}"
       "${super}, V, togglefloating"
       "${super}, P, pseudo"
       "${super}, Y, togglesplit"

@@ -57,8 +57,17 @@
           format-charging = "\n{capacity}";
           format-plugged = "\n{capacity}";
           format-icons = [
-            "󰂎" "󰁺" "󰁻" "󰁼" "󰁽" "󰁾"
-            "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"
+            "󰂎"
+            "󰁺"
+            "󰁻"
+            "󰁼"
+            "󰁽"
+            "󰁾"
+            "󰁿"
+            "󰂀"
+            "󰂁"
+            "󰂂"
+            "󰁹"
           ];
           states = {
             warning = 40;
@@ -69,7 +78,11 @@
         pulseaudio = {
           format = "{icon}\n{volume}";
           format-muted = "󰖁\nX";
-          format-icons = [ "󰖁" "" "" ];
+          format-icons = [
+            "󰖁"
+            ""
+            ""
+          ];
           tooltip = true;
         };
 
@@ -77,8 +90,21 @@
           device = "intel_backlight";
           format = "{icon}\n{percent}";
           format-icons = [
-            "" "" "" "" "" "" ""
-            "" "" "" "" "" "" "" ""
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
           ];
           interval = 60;
         };
@@ -118,7 +144,7 @@
           format = "{:%I\n%M}";
           interval = 60;
           tooltip-format = "<big>{:%A, %d %B}</big>";
-          timezone = "Asia/Kolkata";
+          timezone = "Europe/Paris";
         };
       };
     };

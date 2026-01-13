@@ -19,11 +19,11 @@
     ./programs/wm/hyprland.nix
     ./programs/vscode
     ./programs/waybar.nix
+    ./programs/rofi/rofi.nix
   ];
 
   home.packages = with pkgs; [
     # Hyprland
-    rofi
     waybar
     wl-clipboard
     pywalfox-native
@@ -46,6 +46,8 @@
 
     # Font
     cascadia-code
+    nerd-fonts.caskaydia-cove
+    nerd-fonts.caskaydia-mono
   ];
 
   home.sessionVariables = {
