@@ -40,6 +40,7 @@
     bat
     htop
     jq
+    impala
 
     # Programming
     nixfmt-rfc-style

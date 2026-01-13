@@ -20,7 +20,13 @@
 
   programs.hyprland.enable = true;
 
-  networking.networkmanager.enable = true;
+  networking.networkmanager.enable = false;
+  networking.wireless.iwd.enable = true;
+  networking.wireless.iwd.settings = {
+    General = {
+      EnableNetworkConfiguration = true;
+    };
+  };
 
   services.printing.enable = true;
 
