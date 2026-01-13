@@ -53,6 +53,11 @@
       setopt hist_ignore_dups
       setopt hist_find_no_dups
 
+      # Function to create a directory and cd into it
+      mkcd() {
+        mkdir -p -- "$1" && cd "$1"
+      }
+
       # Completion styling
       zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
