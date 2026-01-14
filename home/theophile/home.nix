@@ -2,6 +2,7 @@
   config,
   pkgs,
   lib,
+  inputs,
   ...
 }:
 
@@ -10,6 +11,7 @@
   home.homeDirectory = "/home/theophile";
 
   imports = [
+    inputs.zen-browser.homeModules.beta
     ./programs/ohmyposh.nix
     ./programs/shell/zsh.nix
     ./programs/kitty.nix
@@ -51,6 +53,9 @@
     cascadia-code
     nerd-fonts.caskaydia-cove
     nerd-fonts.caskaydia-mono
+    noto-fonts
+    noto-fonts-cjk-sans
+    noto-fonts-color-emoji
   ];
 
   home.sessionVariables = {
