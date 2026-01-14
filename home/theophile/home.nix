@@ -22,6 +22,7 @@
     ./programs/vscode
     ./programs/waybar.nix
     ./programs/rofi/rofi.nix
+    ./programs/hyprlock.nix
   ];
 
   home.packages = with pkgs; [
