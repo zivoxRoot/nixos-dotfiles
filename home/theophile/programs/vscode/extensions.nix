@@ -3,6 +3,8 @@
 {
   programs.vscode.profiles.default = {
     enable = true;
+    enableUpdateCheck = false;
+
     extensions = with pkgs.vscode-extensions; [
       jnoortheen.nix-ide
       albert.tabout
