@@ -11,6 +11,7 @@
     ./desktop.nix
     ./system.nix
     ./stylix.nix
+    ./optimization.nix
   ];
 
   programs.zsh.enable = true;
