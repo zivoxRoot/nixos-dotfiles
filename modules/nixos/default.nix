@@ -12,6 +12,7 @@
     ./system.nix
     ./stylix.nix
     ./optimization.nix
+    ./docker.nix
   ];
 
   programs.zsh.enable = true;
