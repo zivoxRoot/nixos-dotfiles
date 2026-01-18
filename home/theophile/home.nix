@@ -49,6 +49,12 @@
     nixfmt-rfc-style
     lazygit
     vscode
+    nodejs_20
+    python3
+    openssl
+
+    # Hacking
+    nmap
 
     # Font
     cascadia-code
